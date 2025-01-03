@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" class="search" />
+    <button type="submit" onclick="getData()">search</button>
+    <br />
+    <div class="search-results"></div>
+
+    <script>
+      
+        const searchText = document.querySelector(".search");
+        const results = document.querySelector(".search-results");
+        
+
+        async function getData() {
+           try {
+            const res = await fetch(`http://localhost:3001/api/v1/recipes/search?filter=${searchText.value}`);
+
+            if(!res.ok) {
+                throw new Error(`Error message: ${res.status}: ${res.message} `)
+
+            }
+            const data = await res.json();
+            console.log(data);
+           }catch(e) {
+            console.error(e.message)
+
+           }
+
+            
+        }
+
+    </script>
+  </body>
+</html>

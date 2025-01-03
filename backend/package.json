@@ -1,0 +1,41 @@
+{
+  "name": "recipe-sharing-api",
+  "version": "1.0.0",
+  "main": "backend/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch --env-file=.env server.js",
+    "dev": "node --watch --trace-warnings --env-file=.env server.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "API"
+  ],
+  "author": "Evan",
+  "license": "ISC",
+  "description": "A crud API for recipe management intergrating social features like commenting,rating,following and more",
+  "overrides": {
+    "whatwg-url": "13.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "buffer-to-stream": "^1.0.0",
+    "cloudinary": "^2.5.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-fileupload": "^1.5.1",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.0",
+    "helmet": "^8.0.0",
+    "ioredis": "^5.4.2",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.2",
+    "qs": "^6.13.1",
+    "resend": "^4.0.1",
+    "sharp": "^0.33.5"
+  }
+}
